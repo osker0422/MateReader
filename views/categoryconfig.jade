@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    include sidemenu
+    include headnavbar
+    
+
+    .container
+      .row
+        .col-sm-2 .col-sm-3
+        .col-sm-8
+            form(role='search',method='post',action='/add_category')
+                .form-group.form-inline
+                    input(type="text",class="form-control",id="exampleInputName2",placeholder="add category",name="add_category")
+                    button.btn.btn-default(type='add_category') add
+            
+            
+            // print users rss feed
+            ul.list-group
+                each categoryname,index in category
+                    li.list-group-item.row
+                        p #{categoryname}
+        .col-sm-2 .col-sm-3

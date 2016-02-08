@@ -1,0 +1,36 @@
+  .sidebar{
+    position: fixed;
+    color: #fff; /* 好みに応じて調節してください */
+  }
+ 
+    .sidebar.left {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 270px; /*この値は調節してください。*/
+      background: #448AFF; /*背景色も好みに応じにて調節してください。*/
+    }
+ 
+    .sidebar.right {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 270px;
+      background: #448AFF;
+    }
+ 
+    .sidebar.top {
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 270px;
+      background: #03A9F4;
+    }
+ 
+    .sidebar.bottom {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 270px;
+      background: #03A9F4;
+    }

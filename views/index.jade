@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{displayName}
+  p Your Uid is #{uid}
+  a(href='/auth/google') Google OAuth
+  br
+  a(href='/api') Authenticated member ONLY!
+  br
+  a(href='/logout') logout

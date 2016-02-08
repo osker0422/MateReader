@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    include sidemenu
+    include headnavbar
+
+    
+        //a.slide-menu(href='#sidr') サイドメニュー
+    .container
+      .row
+        .col-sm-2 .col-sm-3
+        .col-sm-8
+            // print users rss feed
+            ul.list-group
+                each sitename,index in feedSiteName
+                    li.list-group-item.row
+                        a(href='#{feedSiteLink[index]}') #{sitename}
+                        form(action='/feed_remove', method='post')
+                            button.btn.btn-default.pull-right(type='feed_remove',value='#{feedSiteLink[index]}',action='/feedconfig',name='feed_remove')
+                              span.glyphicon.glyphicon-remove
+                              |  Remove
+        .col-sm-2 .col-sm-3
+    

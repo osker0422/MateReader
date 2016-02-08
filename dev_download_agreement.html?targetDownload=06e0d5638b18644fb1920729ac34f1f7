@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Free Download Agreement | ENTEREAL/エンタリアル</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Web開発、モバイルアプリ開発、電子書籍、マーケティングのことならENTEREALへお気軽にご相談ください。">
+		<meta name="keywords" content="Web開発, モバイルアプリ開発, 電子書籍, パフォーマンスマーケティング, クローリング, WEB情報収集, データベース">
+		<meta name="author" content="ENTEREAL / エンタリアル">
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.6.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.5.0.min.css">
+		<link rel="stylesheet" type="text/css" href="css/overWrite.css">
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script type="text/javascript" charset="UTF-8" src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script type="text/javascript" charset="UTF-8" src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Fav and touch icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
+	</head>
+
+	<body id="top">
+		<!-- Navbar -->
+		<div class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle btn-icon pull-left visible-xs visible-sm menuToggleBtn" data-toggle="collapse"><i class="fa fa-fw fa-reorder fa-lg"></i></button>
+					<a class="brand pull-left" href="http://www.entereal.co.jp/">ENTEREAL</a>
+				</div>
+
+				<ul id="headerNaviMenu" class="hidden-xs hidden-sm visible-md visible-lg pull-right">
+					<li><a href="web_development.html"><i class="fa fa-fw fa-desktop"></i> Web Development</a></li>
+					<li><a href="mobile_applications.html"><i class="fa fa-fw fa-cogs"></i> Mobile Applications</a></li>
+					<li><a href="ebooks.html"><i class="fa fa-fw fa-book"></i> eBooks</a></li>
+					<li><a href="web_marketing.html"><i class="fa fa-fw fa-shopping-cart"></i> Web Marketing</a></li>
+					<li><a href="web_services.html"><i class="fa fa-fw fa-leaf"></i> Web services</a></li>
+				</ul>
+			</div>
+		</div><!--/ Navbar -->
+
+		<!-- Contents Wrap -->
+		<div class="container-fluid">
+			<!-- Content menu -->
+			<div class="row">
+				<div class="text-center col-sm-12 hidden-xs">
+					<div id="mainServiceMenu" class="btn-group">
+						<a class="btn btn-3d btn-lg" href="web_development.html"><span class="jpn">WEBサイト構築</span><span class="eng">Web Development</span></a>
+						<a class="btn btn-3d btn-lg" href="mobile_applications.html"><span class="jpn">モバイルアプリ</span><span class="eng">Mobile Applications</span></a>
+						<a class="btn btn-3d btn-lg" href="ebooks.html"><span class="jpn">電子書籍</span><span class="eng">eBooks</span></a>
+						<a class="btn btn-3d btn-lg" href="web_marketing.html"><span class="jpn">WEBマーケティング</span><span class="eng">Web Marketing</span></a>
+						<a class="btn btn-3d btn-lg" href="web_services.html"><span class="jpn">WEBサービス</span><span class="eng">Web Services</span></a>
+					</div>
+				</div>
+			</div><!--/ Content menu -->
+
+			<!-- Content header -->
+			<div class="row">
+				<div class="col-xs-12 col-sm-7 col-md-8">
+					<h1>Free Download Agreement</h1>
+				</div>
+				<div class="col-xs-12 col-sm-5 col-md-4 text-right">
+					<a id="contactBanner" class="bnr" href="dev_contact.html?ctn=fb02">
+						<div class="inner">
+							<p class="text-bold"><i class="fa fa-fw fa-envelope"></i> カスタマイズ/サポート/ご相談</p>
+							<p class="text-large text-bold addDomain">info</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<hr class="soften">
+
+			<div class="clearfix">
+				<h3>フリーダウンロード ライセンス規約</h3>
+				<p><b>本プログラム及びそのソースコードは、以下の使用条件においてフリーでダウンロードが可能ですが、著作権を含むすべてのライセンスは、当社エンタリアルが所有します。</b></p><br>
+
+				<ul>
+					<li>WEBページ上での営利/非営利の活動に関わらず、非商用サイトでの使用である事</li>
+					<li>実質的なサイト所有者/運営者が個人である事</li>
+					<li>非商用サイトへのサイト所有者本人が作業を行い使用する事</li>
+				</ul><br>
+
+				<div class="clearfix">
+					<h4 class="text-danger">以下の場合はダウンロード及び、ご使用の前に必ず当社へご一報ください</h4>
+
+					<ul class="pull-left">
+						<li><b>営利/非営利の活動に関わらず、商用サイトでのご使用をご希望の場合</b></li>
+						<li><b>サイトの目的に関わらず、本人所有のサイト以外へのご使用をご希望の場合</b></li>
+						<li><b>営利/非営利の活動に関わらず、企業/その他の団体がご使用をご希望の場合</b></li>
+					</ul>
+
+					<div class="text-right pull-right">
+						<a id="contactBanner" class="bnr" href="dev_contact.html?ctn=fb02">
+							<div class="inner">
+								<p class="text-bold"><i class="fa fa-fw fa-envelope"></i> 問い合わせ窓口</p>
+								<p class="text-large text-bold addDomain">info</p>
+							</div>
+						</a>
+					</div>
+				</div><br><br>
+
+				<p>
+					当社の許可なく、本プログラムの全部または、その一部を改変したり、再配布することはできません。また、当社の許可なく、ライセンス表示を削除、改変することは一切認められていません。
+					<b>全てのお客様に公平なサービスをご提供するため、ライセンス規約違反を発見した際は、法的対処及び、被害額請求等の厳正な対処となりますので、ご注意ください。</b>
+				</p>
+				<p>外部サイトや2次配布などで取得したものにも本規約が適用されますので、本サイト以外からの取得時点でライセンス規約違反が成立します。</p>
+				<p><b class="text-danger">また、ライセンス違反を発見された方は、お手数でございますが、下記より当社まで通報をお願い致します。</b></p>
+			</div>
+
+			<div class="clearfix text-center">
+				<form id="freeDownloadForm" action="cgi/main.cgi">
+					<input type="hidden" name="mode" value="freeDownload">
+					<input type="hidden" name="targetDownload" id="targetDownload">
+
+					<a class="btn btn-primary" href="javascript:postFreeDownload();"><i class="fa fa-fw fa-cloud-download"></i> 規約に同意してダウンロード</a>
+				</form>
+				<p id="freeDownloadErrorMsg" class="text-danger" style="display:none;">エラー：各ページに戻って再度ダウンロードボタンを選択してください。</p>
+			</div>
+
+			<hr class="soften">
+
+			<div class="clearfix">
+				<h3>ライセンス規約違反 通報窓口</h3>
+				<p><b>当社のフリーダウンロード ライセンス規約に違反している、または、その可能性があるサイトを発見された方はお手数でございますが、以下のページより当社にお知らせください。</p>
+				<p>当社で厳密に評価を行った上で対処致しますので、その疑いのあるサイトも含めてお気軽に情報をお寄せください。</b></p>
+				<p><b class="text-danger">通報者の情報は一切公開されませんし、その後にお手数をお掛けすることもありません。安心してご利用ください。</b></p>
+			</div>
+
+			<div class="clearfix text-center">
+				<a class="btn btn-danger" href="dev_contact.html?ctn=fb91"><i class="fa fa-fw fa-envelope"></i> ライセンス規約違反 通報窓口</a>
+			</div>
+		</div><!--/ Contents Wrap -->
+
+		<!-- Footer -->
+		<div class="footer">
+			<a class="brand" href="http://www.entereal.co.jp/">ENTEREAL</a>
+			<ul id="footerNaviMenu">
+				<li><a href="blog.html"><i class="fa fa-fw fa-file-code-o"></i> 開発ブログ</a></li>
+				<li><a href="contactus.html"><i class="fa fa-fw fa-envelope"></i> お問い合わせ</a></li>
+				<li><a href="aboutus.html"><i class="fa fa-fw fa-building"></i> 会社概要</a></li>
+			</ul>
+			<a class="btn btn-3d btn-icon menuToggleBtn" href="#"><i class="fa fa-fw fa-reorder"></i></a>
+			<a class="btn btn-3d btn-icon toTopBtn" href="#top"><i class="fa fa-fw fa-caret-up"></i></a>
+			<p class="rights">Copyright &copy; 2015 All rights reserved.</p>
+		</div><!--/ Footer -->
+
+		<!-- JavaScript -->
+		<script type="text/javascript" charset="UTF-8" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="js/bootstrap-3.3.6.min.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="js/jquery.sidr.min.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="js/functions.js"></script>
+		<script type="text/javascript" charset="UTF-8">
+		$(document).ready(function() {
+			initPage();
+			easyDownload();
+		});
+		</script>
+
+		<!-- Analytics -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-32358952-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+
+		<!-- ER Analytics -->
+		<script type="text/javascript" charset="UTF-8" src="http://www.wa.entereal.co.jp/js/WebStore.js"></script>
+	</body>
+</html>
