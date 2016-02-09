@@ -64,10 +64,7 @@ router.post('/add_feed', function(req, res, next) {
   getFeed = new Promise(function (resolve, reject) {
       var feedUrl = req.param('rss_input')
       var category = req.param('categorySelect')
-      console.log(req)
-      console.log("hogehogehogheohgeohgoehgoehgoehgeohgohgoe")
-      console.log(category)
-      
+
       //category is not select
       if(category == ""){
         category = "no category"
@@ -113,17 +110,28 @@ router.post('/add_feed', function(req, res, next) {
           
           var categoryOnDb = []
           //category用のDBに登録する
-          Category.find({'uid' : uid,'category' : category}, {'url':1,'category':1,'_id':0},function(err, docs) {
+          Category.find({'uid' : uid,'categoryname' : category}, {'url':1,'categoryname':1,'_id':0},function(err, docs) {
               //登録済みのcategory
               if(!err) {
                 if(docs.length == 0){
                   console.log("category Error")
-              
                 }
                 else{
                   console.log('complete get category')
-                  Category.url.push(feedUrl)
-
+                  console.log(feedUrl)
+                  var categoryDB = new Category
+                  categoryDB.url.push(feedUrl)
+                  
+                  categoryDB.save(function(err) {
+                    if (err) { 
+                        reject(false)
+                        console.log(err); 
+                    }
+                    else{
+                      resolve(true)
+                    }
+                  });
+                  
                 }
                 
               }

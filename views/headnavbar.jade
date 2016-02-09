@@ -39,12 +39,9 @@ nav.navbar.navbar-default
           button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
             span.caret
           ul.dropdown-menu(role='menu', hiddentag='#hiddenValue', visibletag='#visibleValue')
-            li
-              a(href='javascript:dropdownMenu(0)', value='Action') Action
-            li
-              a(href='javascript:dropdownMenu(0)', value='Another action') Another action
-            li
-              a(href='javascript:dropdownMenu(0)', value='Something else here') Something else here
+            each categoryName,index in categoryList
+              li
+                a(href='javascript:dropdownMenu(0)', value='#{categoryName}') #{categoryName}
             li.divider
             li
               a(href='/categoryconfig', value='Separated link') Add Category

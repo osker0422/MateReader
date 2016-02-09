@@ -1,6 +1,7 @@
 var express = require('express');
 var node_promise = require('node-promise')
 var Feed = require('../models/feed.js')
+var Category = require('../models/category.js')
 var FeedParser = require('feedparser');  
 var request = require('request'); 
 
@@ -37,16 +38,42 @@ feedconfig.get('/feedconfig',function(req, res){
           }
         })
        });
+       
 
        //取得が無事成功したら、フィードからそのサイトのタイトルを取得、表示
        getFeedList.then(function(resolve) {
-
-            res.render('feedconfig', {
-              "title" : "title",
-              "feedSiteName" : getTitle,
-              "feedSiteLink" : getUrl
-            });
+        var categoryList = []
+         getCategorys = new Promise(function (resolve, reject) {
+           // SELECT feed FROM Feed WHERE uid=uid に相当
+            Category.find({'uid' : uid}, {'Url':1,'categoryname':1,'_id':0},function(err, docs) {
+              if(!err) {
+                console.log('complete get categorys')
+                
+                console.log("num of item => " + docs.length)
+                for (var i = 0; i < docs.length; i++ ) {
+                  categoryList.push(docs[i].categoryname);
+                }
+                 resolve(categoryList)
+              }
+               else{
+                console.log("Category Database read error")
+                reject("Category Database read error")
+              }
+            })
            
+         });
+         
+         getCategorys.then(function(resolve){
+           res.render('feedconfig', {
+                "title" : "title",
+                "feedSiteName" : feedSiteName,
+                "feedSiteLink" : feedSiteLink,
+                "feedSiteName" : getTitle,
+                "feedSiteLink" : getUrl,
+                "categoryList"  : categoryList
+              });
+         });
+
        })
         
     //res.render('feedconfig')
