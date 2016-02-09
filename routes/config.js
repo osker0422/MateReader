@@ -23,13 +23,17 @@ config.get('/categoryconfig',function(req,res,next){
             console.log('complete get feeds')
             
             console.log("num of item => " + docs.length)
+            /*
+            if (docs.length == 0){
+                categoryList.push("Category is empty")
+            }
+            */
             for (var i = 0; i < docs.length; i++ ) {
                 console.log(docs[i].categoryname)
                 categoryList.push(docs[i].categoryname)
                 //categoryUrl.push(docs[i].array)
             }
-
-             resolve()
+             resolve(categoryList)
           }
            else{
             console.log("Category Database read error")
@@ -44,7 +48,8 @@ config.get('/categoryconfig',function(req,res,next){
 
             res.render('categoryconfig', {
               "title" : "title",
-              "category" : categoryList
+              "categoryList" : categoryList
+              
             });
        })
 })

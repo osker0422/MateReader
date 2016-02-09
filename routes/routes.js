@@ -110,39 +110,41 @@ router.post('/add_feed', function(req, res, next) {
           
           var categoryOnDb = []
           //category用のDBに登録する
-          Category.find({'uid' : uid,'categoryname' : category}, {'url':1,'categoryname':1,'_id':0},function(err, docs) {
-              //登録済みのcategory
-              if(!err) {
-                if(docs.length == 0){
-                  console.log("category Error")
+          chkCategoryList = new Promise(function (resolve, reject) {
+            var categorychkflag = true
+            Category.find({'uid' : uid,'categoryname' : category},{'url':1},function(err,docs){
+              for (var i = 0; i < docs.length; i++ ) {
+                if(docs[i].url == feedUrl){
+                  categorychkflag = false
                 }
-                else{
-                  console.log('complete get category')
-                  console.log(feedUrl)
-                  var categoryDB = new Category
-                  categoryDB.url.push(feedUrl)
-                  
-                  categoryDB.save(function(err) {
-                    if (err) { 
-                        reject(false)
-                        console.log(err); 
-                    }
-                    else{
-                      resolve(true)
-                    }
-                  });
-                  
-                }
-                
               }
-              //登録されていないcategory
-               else{
-                console.log("category Database wrtite error")
-               
-              }
+              resolve(categorychkflag)
+            })
+
           })
-          //console.log('====added  %s ====', meta.title);
-            
+          
+          
+          chkCategoryList.then(function (resolve) {
+            if(resolve == true){
+              Category.update({'uid' : uid,'categoryname' : category}, {$push: {url:feedUrl}},function(err, numberAffected, raw) {
+                //登録済みのcategory
+                if(!err) {
+                  console.log("complete update category database")
+                }
+                //登録されていないcategory
+                 else{
+                  console.log("category Database wrtite error")
+                 
+                }
+             })
+              
+            }
+            else{
+              console.log("this url is already added")
+            }
+
+  
+          })
             
         });
       }
