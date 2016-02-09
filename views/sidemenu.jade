@@ -19,12 +19,12 @@ script(type='text/javascript').
           span.label.label-success 3
           span.glyphicon.glyphicon-chevron-down.pull-right
         #category.sublinks.collapse
-          a.list-group-item.small
-            | カテゴリ1
-            span.glyphicon.glyphicon-chevron-right.pull-right
-          a.list-group-item.small
-            | カテゴリ2
-            span.glyphicon.glyphicon-chevron-right.pull-right
+          
+          each categoryName,index in categoryList
+            a.list-group-item.small
+              | #{categoryName}
+              span.glyphicon.glyphicon-chevron-right.pull-right
+        
         a.list-group-item(href='#menuTwo', data-toggle='collapse', data-target='#menuTwo', data-parent='#menu')
           span.glyphicon.glyphicon-cog
           |  ツール

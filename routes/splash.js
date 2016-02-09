@@ -133,16 +133,43 @@ function(req, res, next) {
           })
           
         })
-
+        
+      //feedの一覧を取得した後実行される
       Promise.all(promises).then(function (d) {
-         res.render('splash', {
-              "title" : title,
-              "feedSiteName" : feedSiteName,
-              "feedSiteLink" : feedSiteLink,
-              "feedArticleTitles" : feedArticleTitles,
-              "feedArticlelinks" : feedArticlelinks,
-              "feedArticleSummary" : feedArticleSummary
-            });
+        var categoryList = []
+         getCategorys = new Promise(function (resolve, reject) {
+           // SELECT feed FROM Feed WHERE uid=uid に相当
+            Category.find({'uid' : uid}, {'Url':1,'categoryname':1,'_id':0},function(err, docs) {
+              if(!err) {
+                console.log('complete get categorys')
+                
+                console.log("num of item => " + docs.length)
+                for (var i = 0; i < docs.length; i++ ) {
+                  categoryList.push(docs[i].categoryname);
+                }
+                 resolve(categoryList)
+              }
+               else{
+                console.log("Category Database read error")
+                reject("Category Database read error")
+              }
+            })
+           
+         });
+         
+         getCategorys.then(function(resolve){
+           res.render('splash', {
+                "title" : title,
+                "feedSiteName" : feedSiteName,
+                "feedSiteLink" : feedSiteLink,
+                "feedArticleTitles" : feedArticleTitles,
+                "feedArticlelinks" : feedArticlelinks,
+                "feedArticleSummary" : feedArticleSummary,
+                "categoryList"  : categoryList
+              });
+         });
+        
+
        
       })
       })
