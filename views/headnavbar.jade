@@ -1,3 +1,16 @@
+script.
+  $(function dropdownMenu(){
+  $('.dropdown-menu a').click(function(){
+  //反映先の要素名を取得
+  var visibleTag = $(this).parents('ul').attr('visibleTag');
+  var hiddenTag = $(this).parents('ul').attr('hiddenTag');
+  //選択された内容でボタンの表示を変える
+  $(visibleTag).html($(this).attr('value'));
+  //選択された内容でhidden項目の値を変える
+  $(hiddenTag).val($(this).attr('value'));
+  })
+  })
+
 nav.navbar.navbar-default
   .container-fluid
     // Brand and toggle get grouped for better mobile display
@@ -34,17 +47,18 @@ nav.navbar.navbar-default
       form.navbar-form.navbar-left(role='search',method='post',action='/add_feed')
         .form-group
           input(type="text",class="form-control",id="exampleInputName2",placeholder="input rss",name="rss_input")
-          button.btn.btn-default(type='button')
-            span#visibleValue カテゴリ選択
-          button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
-            span.caret
-          ul.dropdown-menu(role='menu', hiddentag='#hiddenValue', visibletag='#visibleValue')
-            each categoryName,index in categoryList
+          .btn-group
+            button.btn.btn-default(type='button')
+              span#visibleValue カテゴリ選択
+            button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+              span.caret
+            ul.dropdown-menu(role='menu', hiddentag='#hiddenValue', visibletag='#visibleValue')
+              each categoryName,index in categoryList
+                li
+                  a(href='javascript:void(0)', value='#{categoryName}') #{categoryName}
+              li.divider
               li
-                a(href='javascript:dropdownMenu(0)', value='#{categoryName}') #{categoryName}
-            li.divider
-            li
-              a(href='/categoryconfig', value='Separated link') Add Category
+                a(href='/categoryconfig', value='Separated link') Add Category
           input#hiddenValue(type='hidden', value='',name="categorySelect")
         button.btn.btn-default(type='add_feed') feed_regist
 
@@ -68,15 +82,3 @@ nav.navbar.navbar-default
     // /.navbar-collapse
   // /.container-fluid
   
-script.
-  $(function dropdownMenu(){
-  $('.dropdown-menu a').click(function(){
-  //反映先の要素名を取得
-  var visibleTag = $(this).parents('ul').attr('visibleTag');
-  var hiddenTag = $(this).parents('ul').attr('hiddenTag');
-  //選択された内容でボタンの表示を変える
-  $(visibleTag).html($(this).attr('value'));
-  //選択された内容でhidden項目の値を変える
-  $(hiddenTag).val($(this).attr('value'));
-  })
-  })
