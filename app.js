@@ -95,6 +95,7 @@ var routes = require('./routes/routes');
 var feedconfig = require("./routes/feedconfig")
 var config = require("./routes/config")
 var splash = require("./routes/splash")
+var category = require("./routes/category")
 
 var app = express();
 
@@ -126,6 +127,7 @@ app.use('/', routes);
 app.use('/',feedconfig)
 app.use('/',config)
 app.use('/',splash)
+app.use('/',category)
 //app.use('feed_regist', routes);
 
 

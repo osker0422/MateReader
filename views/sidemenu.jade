@@ -1,5 +1,3 @@
-
-  
 #sidr-menu
     #menu
       .panel.list-group
@@ -15,7 +13,7 @@
         #category.sublinks.collapse
           each categoryName,index in categoryList
             a.list-group-item.small
-              | #{categoryName}
+              a(href='/categorys?category=#{categoryName}') #{categoryName}
               span.glyphicon.glyphicon-chevron-right.pull-right
         a.list-group-item(href='#menuTwo', data-toggle='collapse', data-target='#menuTwo', data-parent='#menu')
           span.glyphicon.glyphicon-cog
