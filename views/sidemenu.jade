@@ -1,7 +1,7 @@
 #sidr-menu
     #menu
       .panel.list-group
-        a.list-group-item(href='#')
+        a.list-group-item(href='/splash')
           span.glyphicon.glyphicon-home
           |  ホーム
           span.glyphicon.glyphicon-chevron-right.pull-right
@@ -12,8 +12,7 @@
           span.glyphicon.glyphicon-chevron-down.pull-right
         #category.sublinks.collapse
           each categoryName,index in categoryList
-            a.list-group-item.small
-              a(href='/categorys?category=#{categoryName}') #{categoryName}
+            a.list-group-item.small(href='/categorys?category=#{categoryName}') #{categoryName}
               span.glyphicon.glyphicon-chevron-right.pull-right
         a.list-group-item(href='#menuTwo', data-toggle='collapse', data-target='#menuTwo', data-parent='#menu')
           span.glyphicon.glyphicon-cog
