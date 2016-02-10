@@ -8,9 +8,21 @@ block content
       .row
         .col-sm-2 .col-sm-3
         .col-sm-8
-            p choose category page
             p #{categoryName}
-            p #{urlinfo}
+
+            each sitename,index in feedSiteName
+              .panel.panel-default
+                 .panel-heading
+                    a(href='#{feedSiteLink[index]}', target='_blank') #{sitename}
+                      .panel-body
+                          each articletitle,indexof_feedArticleTitles in feedArticleTitles[index]
+                            .panel.panel-default
+                              .panel-heading
+                                a(href='#{feedArticlelinks[index][indexof_feedArticleTitles]}', target='_blank') #{articletitle}
+                                //p #{articletitle}p #{feedArticlelinks[index][indexof_feedArticleTitles]}
+                              .panel-body
+                                div#direct-html.
+                                  !{feedArticleSummary[index][indexof_feedArticleTitles]}
 
 
         .col-sm-2 .col-sm-3
