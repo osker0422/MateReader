@@ -4,12 +4,22 @@ var Category = require('../models/category.js')
 var FeedParser = require('feedparser');  
 var request = require('request'); 
 
-var config = express.Router();
+var configRouter = express.Router();
 
+/* load configration */
+var config = require("config");
+var server = config.server;
 
+var serverHost = config.server.hostname
+var serverPort = config.server.port
+
+var service = config.service;
+var title = service.title
+
+/*********************/
 
 //get category config page
-config.get('/categoryconfig',function(req,res,next){
+configRouter.get('/categoryconfig',function(req,res,next){
     console.log("User Access categoryconfig")
     var categoryList =[]
     var categoryUrl = []
@@ -55,7 +65,7 @@ config.get('/categoryconfig',function(req,res,next){
 })
 
 
-config.post('/add_category',function(req,res,next){
+configRouter.post('/add_category',function(req,res,next){
     console.log("User Access categoryconfig")
     
     var categoryName = req.param('add_category')
@@ -92,4 +102,4 @@ config.post('/add_category',function(req,res,next){
 
 
 
-module.exports = config;
+module.exports = configRouter;

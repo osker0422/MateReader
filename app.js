@@ -20,6 +20,8 @@ var server = config.server;
 var serverHost = config.server.hostname
 var serverPort = config.server.port
 
+var service = config.service;
+var title = service.title
 
 /*********************/
 

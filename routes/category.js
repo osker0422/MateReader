@@ -8,6 +8,19 @@ var category = express.Router();
 
 var node_promise = require('node-promise')
 
+
+/* load configration */
+var config = require("config");
+var server = config.server;
+
+var serverHost = config.server.hostname
+var serverPort = config.server.port
+
+var service = config.service;
+var title = service.title
+
+/*********************/
+
 //get category config page
 category.get('/categorys',function(req,res,next){
     console.log("User Access category page")
@@ -146,7 +159,7 @@ category.get('/categorys',function(req,res,next){
          
          getCategorys.then(function(resolve){
            res.render('categorys', {
-                "title" : "title",
+                "title" : title,
                 "feedSiteName" : feedSiteName,
                 "feedSiteLink" : feedSiteLink,
                 "feedArticleTitles" : feedArticleTitles,

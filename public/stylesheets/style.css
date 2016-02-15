@@ -6,3 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+.navbar-brand {
+  background: url("/picture/logo.png") no-repeat left center;
+  background-size: contain;
+  height: 50px;
+  width: 250px;
+}

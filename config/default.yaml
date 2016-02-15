@@ -2,3 +2,5 @@ server:
     hostname: 'default.com'
     port: '8080'
     
+service:
+    title:  'Mate RSS Reader'

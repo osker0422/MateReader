@@ -7,6 +7,18 @@ var request = require('request');
 
 var feedconfig = express.Router();
 
+/* load configration */
+var config = require("config");
+var server = config.server;
+
+var serverHost = config.server.hostname
+var serverPort = config.server.port
+
+var service = config.service;
+var title = service.title
+
+/*********************/
+
 feedconfig.get('/feedconfig',function(req, res){
     
     console.log("User Access feedconfig")
@@ -65,7 +77,7 @@ feedconfig.get('/feedconfig',function(req, res){
          
          getCategorys.then(function(resolve){
            res.render('feedconfig', {
-                "title" : "title",
+                "title" : title,
                 "feedSiteName" : feedSiteName,
                 "feedSiteLink" : feedSiteLink,
                 "feedSiteName" : getTitle,

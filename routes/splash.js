@@ -17,6 +17,17 @@ var node_promise = require('node-promise')
 var title = "My"
 var items = [];
 
+/* load configration */
+var config = require("config");
+var server = config.server;
+
+var serverHost = config.server.hostname
+var serverPort = config.server.port
+
+var service = config.service;
+var title = service.title
+
+/*********************/
 
 
 /* GET aothed */
