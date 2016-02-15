@@ -1,0 +1,4 @@
+server:
+    hostname: 'tea.mugcup.xyz'
+    port: '1234'
+    

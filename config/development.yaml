@@ -1,0 +1,11 @@
+module.exports = {
+    "HOST": {
+        "hostname": "tea.mugcup.xyz",
+        "port": "1234"
+    },
+    
+    "DB": {
+        "" : ""
+    }
+    
+};

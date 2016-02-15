@@ -8,11 +8,23 @@ var app = require('../app');
 var debug = require('debug')('rssReader:server');
 var http = require('http');
 
+/* load configration */
+var config = require("config");
+var server = config.server;
+
+var serverHost = config.server.hostname
+var serverPort = config.server.port
+
+
+/*********************/
+
+
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '1234');
+//var port = normalizePort(process.env.PORT || '1234');
+var port = normalizePort(process.env.PORT || serverPort);
 app.set('port', port);
 
 /**

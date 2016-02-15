@@ -12,15 +12,17 @@ var User = require('./models/user.js');
 
 var feedConfigRoute = require("./routes/feedconfig.js")
 
-/*
-var Feed = require('./models/feed.js')
-var FeedParser = require('feedparser');  
-var request = require('request'); 
+
+/* load configration */
+var config = require("config");
+var server = config.server;
+
+var serverHost = config.server.hostname
+var serverPort = config.server.port
 
 
-var title = "test title"
-var items = [];
-*/
+/*********************/
+
 
 
 // API Access link for creating client ID and secret:
@@ -28,7 +30,8 @@ var items = [];
 
 var GOOGLE_CLIENT_ID = "276072974450-40bs7j9lf9qk4pjut6qn4g7i0eg1ckbo.apps.googleusercontent.com";
 var GOOGLE_CLIENT_SECRET = "2ExouSypwMPe_0kIcZ8nZYpG";
-var CALLBACK_URL = "http://tea.mugcup.xyz:1234/oauth2callback";
+//var CALLBACK_URL = "http://tea.mugcup.xyz:1234/oauth2callback";
+var CALLBACK_URL = "http://" + serverHost +":" + serverPort + "/oauth2callback"
 
 
 //load configration

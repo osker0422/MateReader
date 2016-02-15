@@ -1,0 +1,4 @@
+server:
+    hostname: 'default.com'
+    port: '8080'
+    
