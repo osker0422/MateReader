@@ -14,7 +14,8 @@ Raspberry PIでも軽快に動くようにとNode.jsを採用しました。
  - Node.js v4.2.6
  - MongoDB
 
-# デモ（公開）
+# デモ
+いつか公開する…Category関係のバグFixが終わったら。
 
 # 課題
  - Promiseを多用して非同期処理のうまみを消してる気がするので修正したい
