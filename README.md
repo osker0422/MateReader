@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # What' this?  
 Node.jsのお勉強用に作ったRSSリーダです。一般公開もしています。
 Raspberry PIでも軽快に動くようにとNode.jsを採用しました。
@@ -26,3 +27,7 @@ Raspberry PIでも軽快に動くようにとNode.jsを採用しました。
  - [ ] Twitterでもログインできるようにする
  - [ ] スマホ対応
  - [ ] ページの装飾追加
+=======
+# MateReader
+Created by node.js RSS  Reader.
+>>>>>>> test
