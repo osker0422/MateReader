@@ -74,12 +74,21 @@ router.post('/add_feed', function(req, res, next) {
   
   getFeed = new Promise(function (resolve, reject) {
       var feedUrl = req.param('rss_input')
+      /*
       var category = req.param('categorySelect')
 
       //category is not select
       if(category == ""){
         category = "nocategory"
         //reject(category)
+      }
+      */
+      var category;
+      if (req.param('categorySelect') == ""){
+        category = req.param('categorySelect')
+      }
+      else{
+        category = "nocategory"
       }
    //   else{
         var uid = req.user.uid
@@ -125,6 +134,7 @@ router.post('/add_feed', function(req, res, next) {
           chkCategoryList = new Promise(function (resolve, reject) {
             var categorychkflag = true
             Category.find({'uid' : uid,'categoryname' : category},{'url':1},function(err,docs){
+              if(!err)
               for (var i = 0; i < docs.length; i++ ) {
                 if(docs[i].url == feedUrl){
                   categorychkflag = false

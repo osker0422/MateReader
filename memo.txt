@@ -1,5 +1,0 @@
-MongoDB起動時にでデータベースの保存先を明示的に指定する
-mongod --dbpath C:\data\mongo
-
-
-ほげほげ
