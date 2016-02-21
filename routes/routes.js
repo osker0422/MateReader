@@ -19,6 +19,17 @@ var node_promise = require('node-promise')
 var title = "My"
 var items = [];
 
+/* load configration */
+var config = require("config");
+var server = config.server;
+
+var serverHost = config.server.hostname
+var serverPort = config.server.port
+
+var service = config.service;
+var title = service.title
+
+/*********************/
 
 /* GET index */
 router.get('/', function(req, res, next) {
@@ -29,7 +40,7 @@ router.get('/', function(req, res, next) {
     displayName = req.user.displayName,
     uid = req.user.uid;
   res.render('index', {
-    title: "My RSS Reader",
+    title: title,
     displayName: displayName,
     uid:  uid
   });
@@ -67,9 +78,10 @@ router.post('/add_feed', function(req, res, next) {
 
       //category is not select
       if(category == ""){
-        category = "no category"
+        category = "nocategory"
+        //reject(category)
       }
-      else{
+   //   else{
         var uid = req.user.uid
         var result =""
         //フィードを取得できるか試して、DBにいれる
@@ -147,7 +159,7 @@ router.post('/add_feed', function(req, res, next) {
           })
             
         });
-      }
+      //}
 
   })
   
@@ -159,10 +171,8 @@ router.post('/add_feed', function(req, res, next) {
   function(reject){
     console.log("getFeed save Error")
     console.log(reject)
-    /*
-    res.redirect('/authed') // なんかエラーメッセージで投げる
-    }
-    */
+    var error_msg = reject
+    res.redirect('splash');
   });
   
 

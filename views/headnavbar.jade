@@ -1,3 +1,16 @@
+script.
+  $(function dropdownMenu(){
+  $('.dropdown-menu a').click(function(){
+  //反映先の要素名を取得
+  var visibleTag = $(this).parents('ul').attr('visibleTag');
+  var hiddenTag = $(this).parents('ul').attr('hiddenTag');
+  //選択された内容でボタンの表示を変える
+  $(visibleTag).html($(this).attr('value'));
+  //選択された内容でhidden項目の値を変える
+  $(hiddenTag).val($(this).attr('value'));
+  })
+  })
+
 nav.navbar.navbar-default
   .container-fluid
     // Brand and toggle get grouped for better mobile display
@@ -7,31 +20,13 @@ nav.navbar.navbar-default
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/splash')
-        //img.img-responsive.center-block(src='/picture/logo.png')
+      a.navbar-brand(href='splash')
     // Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
         li
           a.slide-menu(href='#sidr')
             i.glyphicon.glyphicon-menu-hamburger
-        li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-            | Dropdown 
-            span.caret
-          ul.dropdown-menu
-            li
-              a(href='/feedconfig') FeedConfig
-            li
-              a(href='#') Another action
-            li
-              a(href='#') Something else here
-            li.divider(role='separator')
-            li
-              a(href='#') Separated link
-            li.divider(role='separator')
-            li
-              a(href='#') One more separated link
       form.navbar-form.navbar-left(role='search',method='post',action='/add_feed')
         .form-group
           input(type="text",class="form-control",id="exampleInputName2",placeholder="input rss",name="rss_input")
@@ -43,12 +38,12 @@ nav.navbar.navbar-default
             ul.dropdown-menu(role='menu', hiddentag='#hiddenValue', visibletag='#visibleValue')
               each categoryName,index in categoryList
                 li
-                  a(href='javascript:void(0)', value='#{categoryName}') #{categoryName}
+                  a(href='javascript:dropdownMenu(0)', value='#{categoryName}') #{categoryName}
               li.divider
               li
-                a(href='/categoryconfig', value='Separated link') Add Category
+                a(href='/categoryconfig', value='Separated link') カテゴリ追加
           input#hiddenValue(type='hidden', value='',name="categorySelect")
-        button.btn.btn-default(type='add_feed') feed_regist
+        button.btn.btn-default(type='add_feed') フィード登録
 
       ul.nav.navbar-nav.navbar-right
         li
@@ -59,11 +54,7 @@ nav.navbar.navbar-default
             span.caret
           ul.dropdown-menu
             li
-              a(href='/feedconfig') FeedConfig
-            li
-              a(href='/categoryconfig') Another action
-            li
-              a(href='#') Something else here
+              a(href='/feedconfig') フィード設定
             li.divider(role='separator')
             li
               a(href='/logout') logout

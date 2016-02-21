@@ -1,6 +1,19 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+    include sidemenu
+    include headnavbar
+  
+    //a.slide-menu(href='#sidr') サイドメニュー
+    .container
+      .row
+        .col-sm-2
+          include leftside
+        .col-sm-8
+              p #{error_msg}
+        .col-sm-2
+          include rightside
+
+
+
+

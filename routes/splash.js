@@ -39,12 +39,7 @@ function(req, res, next) {
   var items = []
   var uid = req.user.uid
   
-  /*debug mess*/
-  console.log("======== router get authed debugmess ========")
-  console.log(uid)
-  console.log(req.user.displayName)
-  console.log("======== router get authed debugmess end ========")
-  
+
   var getUrl = [];
           
   var feedArticleTitles = []

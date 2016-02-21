@@ -7,8 +7,10 @@ block content
     //a.slide-menu(href='#sidr') サイドメニュー
     .container
       .row
-        .col-sm-2 .col-sm-3
+        .col-sm-2
+          include leftside
         .col-sm-8
+              p #{error_msg}
               // print users rss feed
               each sitename,index in feedSiteName
                   .panel.panel-default
@@ -23,7 +25,8 @@ block content
                                   .panel-body
                                     div#direct-html.
                                       !{feedArticleSummary[index][indexof_feedArticleTitles]}
-        .col-sm-2 .col-sm-3
+        .col-sm-2
+          include rightside
 
 
 

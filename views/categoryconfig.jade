@@ -7,7 +7,8 @@ block content
 
     .container
       .row
-        .col-sm-2 .col-sm-3
+        .col-sm-2 
+            include leftside
         .col-sm-8
             form(role='search',method='post',action='/add_category')
                 .form-group.form-inline
@@ -20,4 +21,5 @@ block content
                 each categoryname,index in categoryList
                     li.list-group-item.row
                         p #{categoryname}
-        .col-sm-2 .col-sm-3
+        .col-sm-2
+            include rightside

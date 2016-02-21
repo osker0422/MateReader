@@ -1,11 +1,30 @@
-extends layout
+
+head
+
+  link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+  link(rel='stylesheet', href='/stylesheets/jasny-bootstrap.css')
+  //link(rel='stylesheet', href='/stylesheets/offcanvas.css')
+  link(rel='stylesheet', href='/stylesheets/jquery.sidr.light.css')
+  link(rel='stylesheet', href='/stylesheets/top.css')
+  script(src='/javascripts/jquery-1.12.0.min.js')
+  script(src='/javascripts/jquery.sidr.js')
+  script(src='/javascripts/bootstrap.js')
+  script(src='/javascripts/jasny-bootstrap.js')
+  script(src='/javascripts/jquery.sidebar.js')
+  script(src='/javascripts/sideslidr.js')
+  script(src='/javascripts/headnavbar.js')
+  meta(http-equiv="Pragma",content="no-cache")
+  meta(http-equiv="cache-control",content="no-cache")
+  meta(http-equiv="expires",content="0")
+
+//extends layout
 
 block content
-  h1= title
-  p Welcome to #{displayName}
-  p Your Uid is #{uid}
-  a(href='/auth/google') Google OAuth
-  br
-  a(href='/api') Authenticated member ONLY!
-  br
-  a(href='/logout') logout
+
+  #contents
+    section
+      img.img-responsive.center-block(src='/picture/logo.png')
+      //p Welcome to #{displayName}
+      //p Your Uid is #{uid}
+      a(href='/auth/google')
+        img.img-responsive.center-block(src='/picture/google_signin_button.jpg')
