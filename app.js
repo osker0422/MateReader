@@ -23,6 +23,9 @@ var serverPort = config.server.port
 var service = config.service;
 var title = service.title
 
+var GOOGLE_CLIENT_ID = service.google_client_id
+var GOOGLE_CLIENT_SECRET = service.google_client_secret;
+
 /*********************/
 
 
@@ -30,8 +33,7 @@ var title = service.title
 // API Access link for creating client ID and secret:
 // https://code.google.com/apis/console/
 
-var GOOGLE_CLIENT_ID = "276072974450-40bs7j9lf9qk4pjut6qn4g7i0eg1ckbo.apps.googleusercontent.com";
-var GOOGLE_CLIENT_SECRET = "2ExouSypwMPe_0kIcZ8nZYpG";
+
 //var CALLBACK_URL = "http://tea.mugcup.xyz:1234/oauth2callback";
 var CALLBACK_URL = "http://" + serverHost +":" + serverPort + "/oauth2callback"
 

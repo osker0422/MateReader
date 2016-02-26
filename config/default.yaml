@@ -1,6 +1,8 @@
 server:
     hostname: 'default.com'
     port: '8080'
-    
+
 service:
     title:  'Mate Reader'
+    google_client_id : "276072974450-40bs7j9lf9qk4pjut6qn4g7i0eg1ckbo.apps.googleusercontent.com";
+    google_client_secret : "2ExouSypwMPe_0kIcZ8nZYpG";
